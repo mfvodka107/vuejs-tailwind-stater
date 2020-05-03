@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="home" class="container">
+    <div class="">
+      <img src="../assets/images/logo.png" alt="logo" />
+    </div>
+    <!-- game logo -->
+    <p class="m-auto">This is home</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { mapState, mapActions, mapMutations } from 'vuex'
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  name: "home",
+  components: {},
+  mounted: function() {
+
+  },
+  computed: {
+    ...mapState({})
+  },
+  methods: {
+    ...mapActions([]),
+    ...mapMutations([])
   }
-}
+};
 </script>
+
+<style lang="scss">
+@import url("../themes/home.scss");
+</style>
